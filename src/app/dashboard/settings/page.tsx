@@ -1,3 +1,9 @@
-export default function SettingsPage() {
-    return <p>Here you can configure your personal settings.</p>;
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Settings",
+}
+
+export default function Settings(){
+    return <div></div>
 }

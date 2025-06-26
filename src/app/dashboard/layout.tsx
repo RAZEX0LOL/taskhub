@@ -1,10 +1,13 @@
-import type {ReactNode} from 'react';
+import type {PropsWithChildren} from "react";
+import {Sidebar} from "@/components/layout/sidebar/Sidebar";
 
-export default function SettingsLayout({ children }: { children: ReactNode }) {
+export default function DashboardLayout({children}: PropsWithChildren) {
     return (
-        <div className="space-y-4">
-            <h2 className="text-lg font-medium">⚙️ Settings</h2>
-            <section>{children}</section>
+        <div className={'grid grid-cols-[250px_1fr] h-screen'}>
+            <Sidebar/>
+            <main className={'p-5'}>
+                {children}
+            </main>
         </div>
     );
 }
